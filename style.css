@@ -1,0 +1,91 @@
+.view {
+	background-color: lightblue;
+	font-size: 24px;
+  font-family: forte;
+	color: mediumblue;
+	padding: 35px;
+	padding-left: 30%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.zunguka {
+  color: black;
+  font-size: 14px;
+  font-style: san serif;
+}
+/* Staili ya heda */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* staili ya nav ya juu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* aina ya staili ya nav ya juu */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 24px 30px;
+  text-decoration: none;
+}
+
+/* badili rangi hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a:active {
+  text-decoration: underline;
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* weka usawa wa colum */
+.column {
+  float: left;
+  padding: 10px;
+  padding-left: 5%;
+}
+
+/* kushoto na kulia column */
+.column.side {
+  width: 20%;
+}
+
+/* column ya kati */
+.column {
+  width: 40%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* chini kabisa */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
