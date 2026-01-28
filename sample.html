@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Configuration Documentation</title>
+    <link rel="stylesheet" href="decoration.css">
+</head>
+<body>
+
+<header>
+    <h1>Enterprise Network Configuration</h1>
+    <p>Iringa – Makambako – Lindi – Gaza – Dodoma</p>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#ip">IP Addressing</a>
+    <a href="#routers">Routers</a>
+    <a href="#dhcp">DHCP</a>
+    <a href="#devices">Devices</a>
+</nav>
+
+<section id="overview">
+    <h2>Network Overview</h2>
+    <p>
+        This enterprise network is designed using Cisco routers and switches.
+        The system supports automatic IP assignment using DHCP and ensures
+        communication between all branches through WAN connections.
+    </p>
+</section>
+
+<section id="ip">
+    <h2>IP Addressing Scheme</h2>
+    <table>
+        <tr>
+            <th>Location</th>
+            <th>Network</th>
+            <th>Subnet Mask</th>
+            <th>Gateway</th>
+        </tr>
+        <tr>
+            <td>Gangilonga</td>
+            <td>192.168.11.0</td>
+            <td>255.255.255.0</td>
+            <td>192.168.11.1</td>
+        </tr>
+        <tr>
+            <td>Makambako</td>
+            <td>192.168.20.0</td>
+            <td>255.255.255.0</td>
+            <td>192.168.20.1</td>
+        </tr>
+        <tr>
+            <td>Lindi</td>
+            <td>192.168.30.0</td>
+            <td>255.255.255.0</td>
+            <td>192.168.30.1</td>
+        </tr>
+    </table>
+</section>
+
+<section id="routers">
+    <h2>Router Configuration Summary</h2>
+    <ul>
+        <li><strong>Router R1 (Iringa)</strong> – Connects Gangilonga and Makambako LANs</li>
+        <li><strong>Router R2 (DSM)</strong> – Connects Lindi and Gaza LANs</li>
+        <li>Routers communicate via a point-to-point WAN link</li>
+    </ul>
+</section>
+
+<section id="dhcp">
+    <h2>DHCP Services</h2>
+    <p>
+        Dynamic Host Configuration Protocol (DHCP) is used to automatically
+        assign IP addresses to all end devices. This reduces manual
+        configuration errors and improves network scalability.
+    </p>
+</section>
+
+<section id="devices">
+    <h2>End Devices</h2>
+    <p>
+        All PCs, laptops, and smartphones obtain IP addresses automatically.
+        Wireless devices connect through a cellular tower and access the same
+        network resources.
+    </p>
+
+    <button onclick="showMessage()">Test DHCP</button>
+</section>
+
+<footer>
+    <p>Prepared by Ilumbo David | Computer Networking Assignment</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
