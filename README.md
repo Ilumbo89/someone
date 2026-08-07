@@ -1,23 +1,33 @@
-hash_passwords.php
+# University Assignment & Quiz Portal
 
-This script helps migrate plain-text passwords stored in the `users` table to secure hashed passwords using PHP's `password_hash()`.
+A clean PHP/MySQL application for managing student assignments and quizzes.
 
-Usage:
+## Features
 
-- Dry run (shows what would change):
+- Admin-created student and teacher accounts
+- Role-based dashboard
+- Teachers can create assignments and quizzes
+- Students can submit assignments and take quizzes
+- Quiz grading and submission tracking
 
-```bash
-php scripts/hash_passwords.php
-```
+## Setup
 
-- Apply changes (updates the DB):
+1. Copy the `university-portal` folder into your web server root, e.g. `C:\xampp\htdocs\university-portal`
+2. Import `db/schema.sql` into MySQL if you want to set up the database manually
+3. Adjust `includes/config.php` if your database user, password or URL differ
+4. Start Apache and MySQL
+5. Open the site at:
 
-```bash
-php scripts/hash_passwords.php --apply
-```
+    `http://localhost/university-portal/public/index.php`
 
-Important:
+## Notes
 
-- Always BACK UP your database before running with `--apply`.
-- The script detects common hash formats (bcrypt, argon2). If a password does not look hashed it will be re-hashed.
-- After running, users will log in using their existing plain password (now hashed on the server side). If you manually altered passwords earlier, ensure you know the original plain values before running.
+- Student and teacher accounts must be created by an admin from the Admin Panel.
+- Public registration is disabled; users should contact the admin to get access.
+- Admin can create users using `admin_create_user.php` or via the Admin Panel.
+- If the database has no users yet, the app will create a default admin account on first load with:
+  - Email: `admin@university-portal.test`
+  - Password: `Admin@123`
+- Uploaded assignment files are stored in `uploads/`
+- The database schema includes sample user and content tables
+- Use the teacher role to add assignments and quizzes
